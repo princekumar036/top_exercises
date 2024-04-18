@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Comic+Neue&family=Gloria+Hallelujah&family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img { width: 100%; }
+a { text-decoration: none; }
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2rem; }
+/* p { margin-bottom: 1rem; } */
+
+body {
+    background-image: url('../images/bg.jpg');
+    margin-top: 7rem;
+    padding-bottom: 5rem;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+/* HEADER in ALL FILES */
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+header .brand {
+    font-family: 'Permanent Marker', cursive;
+    transition: transform 0.5s ease-in-out;
+}
+
+header .subbrand {
+    margin-top: -1rem;
+    color: black;
+}
+
+header:hover .brand{
+    transform: scale(1.05);
+}
+
+/* INDEX */
+.index-main {
+    width: 70%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 9rem;
+    /* padding-top: 4rem; */
+}
+
+.recipe-card {
+    width: 40%;
+    box-shadow: 0 0 5px #777;
+    position: relative;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-card p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5rem;
+    transition: background-color font-size 0.5s ease-in-out;
+}
+.recipe-card:hover p {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.35rem;
+}
+
+/* RECIPE */
+.recipe-main {
+    width: 70%;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff4e6;
+    padding: 1rem;
+    box-shadow: 0 0 5px #777;
+}
+
+.recipe-main h2 {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.recipe-main img {
+    padding: 1rem 0;
+    border: 1px;
+}
+
+.recipe-main p, ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.instruction-heading {
+    font-weight: bold;
+}
+
+
+
+
+

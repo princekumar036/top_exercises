@@ -1,0 +1,60 @@
+:root {
+    --main-color: #1892d3;
+    --accent-color: #efb428;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+
+}
+
+/* SIDE PANEL */
+.sidepane {
+    flex: 1;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.sidepane ul {
+    margin-bottom: 3rem;
+}
+
+.sidepane nav li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.sidepane a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+.sidepane li img {
+    width: 20px;
+}
+
+
+
+.mainpane {
+    flex: 5;
+}

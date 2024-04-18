@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('Norse-Bold.otf');
+}
+
+:root {
+    --accent-color: #596d48;
+    --focus-color: #75986b;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #aaa;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 10px #444;
+}
+
+.left {
+    flex: 2;
+    background-image: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962');
+    background-size: cover;
+    background-position: center;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 40%;
+}
+
+.brand h1 {
+    font-family: 'Norse Bold';
+    color: white;
+    font-size: 4rem;
+}
+
+.brand img {
+    width: 75px;
+}
+
+.right {
+    flex: 3;
+    padding: 10% 10% 10% 3rem;
+    background-color: white;
+}
+
+.right p {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.right h2 {
+    margin-top: 2rem;
+}
+
+.right form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    width: 50%;
+    position: relative;
+}
+
+.form-control * {
+    display: block;
+}
+
+.form-control label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.form-control input {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    padding-left: 0;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--focus-color);
+}
+
+.form-control input:focus + label{
+    color: var(--focus-color);
+}
+
+form button {
+    background-color: var(--accent-color);
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--focus-color);
+}
+
+.right p.error {
+    font-weight: normal;
+    font-size: 0.75rem;
+    color: red;
+    position: absolute;
+    top: 70%;
+}
+
+p.login {
+    font-weight: normal;
+    margin-top: 3rem;
+}
+
+p.login a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+p.login a:hover {
+    text-decoration: underline;
+}

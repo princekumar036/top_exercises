@@ -1,0 +1,133 @@
+
+:root {
+    --main-color: #9292fe;
+    --accent-color: #11b421;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+}
+
+/* HEADER AREA */
+header {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+main {
+    display: flex;
+    min-height: 100%;
+}
+
+/* FORM AREA */
+.book-add {
+    flex: 1;
+    background-color: var(--main-color);
+    padding: 3rem;
+    color: white;
+}
+
+.book-add > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-add > div i {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-control input {
+    min-width: 180px;
+    padding: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+}
+
+.form-control input:focus {
+    outline: none;
+}
+
+form button {
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+/* CATALOGUE AREA */
+.library {
+    flex: 4;
+    margin: 2rem;
+}
+
+.book-catalogue {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.book-card {
+    box-shadow: 0 0 5px #ccc;
+    border: 1px solid #eee;
+    padding: 0.5rem 1rem;
+    line-height: 2;
+}
+
+.book-card > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    color: var(--main-color);
+}
+
+.status span {
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+}
+
+.status:hover span {
+    opacity: 1;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: var(--accent-color);
+}

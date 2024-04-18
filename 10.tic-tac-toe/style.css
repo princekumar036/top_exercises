@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Fredericka+the+Great&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --cell-size: 100px;
+    --main-color: #ddd;
+}
+
+body {
+    margin: 0;
+    background-color: #222;
+    color: var(--main-color);
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+.head {
+    background-color: #444;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 4rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+.head p {
+    margin: 0;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    font-weight: bold;
+}
+
+.cell {
+    display: grid;
+    place-content: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid var(--main-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.cell.filled {
+    cursor: not-allowed;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+}
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.gameover {
+    /* position: absolute; */
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    display: grid;
+    place-content: center;
+    background-color: rgba(34, 34, 34, 1);
+}
+
+.gameover.hidden {
+    display: none;
+}
+
+.tail button {
+    font-family: 'Dosis', sans-serif;
+    border: none;
+    background-color: #555;
+    color: var(--main-color);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px #000;
+}
